@@ -1,1 +1,1049 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Prints of Hope — International Print Exhibition 2026 by The Printmaking Lab, Sri Lanka. An international exhibition bringing artists together through printmaking, memory, dialogue and shared experience.">
+
+    <meta name="keywords"
+          content="Prints of Hope, International Print Exhibition 2026, Printmaking, The Printmaking Lab, Sri Lanka, contemporary printmaking, woodcut, monoprint, linocut">
+
+    <meta name="author"
+          content="The Printmaking Lab">
+
+    <title>Prints of Hope — International Print Exhibition 2026 | The Printmaking Lab</title>
+
+    <style>
+
+        /* ==============================
+           GLOBAL
+        ============================== */
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #ffffff;
+            color: #171717;
+            line-height: 1.7;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+
+        /* ==============================
+           HEADER
+        ============================== */
+
+        header {
+            border-bottom: 1px solid #dddddd;
+            background: #ffffff;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-inner {
+            max-width: 1200px;
+            margin: auto;
+            padding: 18px 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            font-weight: 400;
+        }
+
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 22px;
+            font-size: 13px;
+            letter-spacing: 1px;
+        }
+
+        nav a {
+            transition: opacity 0.3s ease;
+        }
+
+        nav a:hover {
+            opacity: 0.5;
+        }
+
+
+        /* ==============================
+           HERO
+        ============================== */
+
+        .hero {
+            min-height: 72vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 100px 25px;
+            background:
+                linear-gradient(
+                    rgba(0,0,0,0.48),
+                    rgba(0,0,0,0.48)
+                ),
+                url("images/prints-of-hope.jpg") center/cover no-repeat;
+            color: white;
+        }
+
+        .hero-content {
+            max-width: 900px;
+        }
+
+        .hero-kicker {
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            font-size: 13px;
+            margin-bottom: 25px;
+        }
+
+        .hero h1 {
+            font-size: clamp(45px, 8vw, 92px);
+            line-height: 1;
+            font-weight: 700;
+            margin-bottom: 25px;
+        }
+
+        .hero h2 {
+            font-size: clamp(20px, 3vw, 32px);
+            font-weight: 400;
+            margin-bottom: 25px;
+        }
+
+        .hero p {
+            max-width: 720px;
+            margin: auto;
+            font-size: 18px;
+        }
+
+
+        /* ==============================
+           MAIN
+        ============================== */
+
+        main {
+            max-width: 1100px;
+            margin: auto;
+            padding: 90px 30px;
+        }
+
+        section {
+            margin-bottom: 100px;
+        }
+
+        .section-label {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: #777777;
+            margin-bottom: 15px;
+        }
+
+        h2 {
+            font-size: clamp(30px, 5vw, 52px);
+            line-height: 1.1;
+            margin-bottom: 30px;
+        }
+
+        h3 {
+            font-size: 25px;
+            margin-bottom: 15px;
+        }
+
+        p {
+            font-size: 17px;
+            margin-bottom: 20px;
+        }
+
+
+        /* ==============================
+           INTRO
+        ============================== */
+
+        .intro {
+            max-width: 850px;
+        }
+
+        .intro-lead {
+            font-size: 25px;
+            line-height: 1.5;
+            margin-bottom: 30px;
+        }
+
+
+        /* ==============================
+           STATEMENT
+        ============================== */
+
+        .statement {
+            background: #f4f4f4;
+            padding: 60px;
+            margin-top: 40px;
+        }
+
+        .statement p {
+            font-size: 21px;
+            line-height: 1.7;
+        }
+
+
+        /* ==============================
+           PRINTMAKING
+        ============================== */
+
+        .medium-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1px;
+            background: #dddddd;
+            margin-top: 40px;
+        }
+
+        .medium {
+            background: white;
+            padding: 30px;
+            min-height: 130px;
+        }
+
+        .medium strong {
+            display: block;
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+
+        .medium span {
+            color: #777777;
+            font-size: 14px;
+        }
+
+
+        /* ==============================
+           ARTWORK GALLERY
+        ============================== */
+
+        .gallery-intro {
+            max-width: 750px;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .gallery-item {
+            background: #f2f2f2;
+            aspect-ratio: 1 / 1;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.04);
+        }
+
+        .gallery-placeholder {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 30px;
+            color: #777777;
+            font-size: 14px;
+        }
+
+
+        /* ==============================
+           EXHIBITION INFO
+        ============================== */
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            border-top: 1px solid #dddddd;
+        }
+
+        .info-box {
+            padding: 25px 0;
+            border-bottom: 1px solid #dddddd;
+        }
+
+        .info-box:nth-child(odd) {
+            margin-right: 40px;
+        }
+
+        .info-title {
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 11px;
+            color: #777777;
+            margin-bottom: 7px;
+        }
+
+        .info-value {
+            font-size: 19px;
+        }
+
+
+        /* ==============================
+           ARCHIVE LINK
+        ============================== */
+
+        .archive {
+            background: #171717;
+            color: white;
+            padding: 65px;
+            text-align: center;
+        }
+
+        .archive h2 {
+            margin-bottom: 20px;
+        }
+
+        .archive p {
+            max-width: 700px;
+            margin: 0 auto 30px;
+            color: #dddddd;
+        }
+
+        .button {
+            display: inline-block;
+            border: 1px solid white;
+            padding: 14px 28px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 12px;
+            transition: all 0.3s ease;
+        }
+
+        .button:hover {
+            background: white;
+            color: #171717;
+        }
+
+
+        /* ==============================
+           PRINTMAKING LAB
+        ============================== */
+
+        .lab {
+            border-top: 1px solid #dddddd;
+            padding-top: 70px;
+        }
+
+        .lab-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 70px;
+        }
+
+        .lab-name {
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+
+
+        /* ==============================
+           FOOTER
+        ============================== */
+
+        footer {
+            background: #111111;
+            color: white;
+            padding: 50px 30px;
+        }
+
+        .footer-inner {
+            max-width: 1100px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .footer-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .footer-text {
+            color: #aaaaaa;
+            font-size: 14px;
+        }
+
+
+        /* ==============================
+           MOBILE
+        ============================== */
+
+        @media (max-width: 800px) {
+
+            .header-inner {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            nav {
+                gap: 12px;
+                font-size: 11px;
+            }
+
+            .hero {
+                min-height: 65vh;
+                padding: 80px 20px;
+            }
+
+            main {
+                padding: 60px 20px;
+            }
+
+            section {
+                margin-bottom: 70px;
+            }
+
+            .statement {
+                padding: 35px 25px;
+            }
+
+            .medium-grid,
+            .gallery,
+            .info-grid,
+            .lab-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .info-box:nth-child(odd) {
+                margin-right: 0;
+            }
+
+            .archive {
+                padding: 45px 25px;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+<!-- ==============================
+     HEADER
+============================== -->
+
+<header>
+
+    <div class="header-inner">
+
+        <a href="index.html" class="logo">
+            THE PRINTMAKING <span>LAB</span>
+        </a>
+
+        <nav>
+
+            <a href="index.html">HOME</a>
+
+            <a href="index.html#journal">JOURNAL</a>
+
+            <a href="index.html#exhibitions">EXHIBITIONS</a>
+
+            <a href="index.html#artists">ARTISTS</a>
+
+            <a href="index.html#videos">VIDEOS</a>
+
+            <a href="index.html#articles">ARTICLES</a>
+
+            <a href="index.html#about">ABOUT</a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+
+<!-- ==============================
+     HERO
+============================== -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <div class="hero-kicker">
+            International Print Exhibition · 2026
+        </div>
+
+        <h1>
+            Prints of Hope
+        </h1>
+
+        <h2>
+            Printmaking · Dialogue · Memory · Shared Experience
+        </h2>
+
+        <p>
+            An international print exhibition bringing artists together
+            through printmaking, dialogue, memory and shared experience.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==============================
+     MAIN CONTENT
+============================== -->
+
+<main>
+
+
+    <!-- INTRODUCTION -->
+
+    <section>
+
+        <div class="section-label">
+            01 — Exhibition
+        </div>
+
+        <div class="intro">
+
+            <h2>
+                Prints of Hope
+            </h2>
+
+            <p class="intro-lead">
+                An international print exhibition bringing artists
+                together through the language of printmaking.
+            </p>
+
+            <p>
+                <strong>Prints of Hope</strong> is an international
+                print exhibition presented by The Printmaking Lab,
+                Sri Lanka.
+            </p>
+
+            <p>
+                The exhibition invites artists from different
+                countries, cultures and artistic backgrounds to
+                respond through printmaking to questions of memory,
+                experience, conflict, humanity and hope.
+            </p>
+
+            <p>
+                Artists are invited to work across different
+                printmaking approaches, allowing the exhibition to
+                become a meeting point between traditional,
+                contemporary and experimental forms of print.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- CURATORIAL STATEMENT -->
+
+    <section>
+
+        <div class="section-label">
+            02 — Curatorial Statement
+        </div>
+
+        <h2>
+            Every print leaves a trace.
+        </h2>
+
+        <div class="statement">
+
+            <p>
+                We refuse to be silent.
+            </p>
+
+            <p>
+                In a world where power speaks loudly, where decisions
+                are made behind closed doors, and where consequences
+                are carried by the many, silence can become complicity.
+            </p>
+
+            <p>
+                We choose to respond through marks, ink, pressure,
+                repetition and memory.
+            </p>
+
+            <p>
+                Printmaking is not simply a technique. It is an act
+                of making a trace — an image transferred from one
+                surface to another, carrying evidence of an encounter.
+            </p>
+
+            <p>
+                The exhibition creates a space between conflict and
+                conscience, between memory and the present, and
+                between individual experience and shared humanity.
+            </p>
+
+            <p>
+                Every print can become a witness.
+                Every image can carry a memory.
+                Every mark can open a space for dialogue.
+            </p>
+
+            <p>
+                <strong>
+                    Hope is not passive. Hope is an action.
+                </strong>
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- PRINTMAKING MEDIA -->
+
+    <section>
+
+        <div class="section-label">
+            03 — Printmaking
+        </div>
+
+        <h2>
+            Expanded Printmaking
+        </h2>
+
+        <p>
+            The exhibition welcomes works made through a broad range
+            of printmaking practices and experimental approaches.
+        </p>
+
+        <div class="medium-grid">
+
+            <div class="medium">
+                <strong>Woodcut</strong>
+                <span>Relief printmaking</span>
+            </div>
+
+            <div class="medium">
+                <strong>Linocut</strong>
+                <span>Relief printmaking</span>
+            </div>
+
+            <div class="medium">
+                <strong>Monoprint</strong>
+                <span>Unique printed image</span>
+            </div>
+
+            <div class="medium">
+                <strong>Monotype</strong>
+                <span>Experimental printmaking</span>
+            </div>
+
+            <div class="medium">
+                <strong>Digital Print</strong>
+                <span>Contemporary image making</span>
+            </div>
+
+            <div class="medium">
+                <strong>Mixed Media</strong>
+                <span>Expanded print practices</span>
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ARTWORKS -->
+
+    <section>
+
+        <div class="section-label">
+            04 — Artists & Works
+        </div>
+
+        <div class="gallery-intro">
+
+            <h2>
+                The Exhibition
+            </h2>
+
+            <p>
+                A collection of works by participating artists from
+                different places and artistic backgrounds.
+            </p>
+
+            <p>
+                Artwork images can be added to this gallery as the
+                exhibition archive develops.
+            </p>
+
+        </div>
+
+
+        <div class="gallery">
+
+            <!--
+                Replace these placeholders with your artwork images.
+
+                Example:
+
+                <div class="gallery-item">
+                    <img src="images/prints-of-hope-01.jpg"
+                         alt="Prints of Hope — Artwork 01">
+                </div>
+            -->
+
+
+            <div class="gallery-item">
+
+                <div class="gallery-placeholder">
+                    PRINTS OF HOPE<br>
+                    Artwork 01
+                </div>
+
+            </div>
+
+
+            <div class="gallery-item">
+
+                <div class="gallery-placeholder">
+                    PRINTS OF HOPE<br>
+                    Artwork 02
+                </div>
+
+            </div>
+
+
+            <div class="gallery-item">
+
+                <div class="gallery-placeholder">
+                    PRINTS OF HOPE<br>
+                    Artwork 03
+                </div>
+
+            </div>
+
+
+            <div class="gallery-item">
+
+                <div class="gallery-placeholder">
+                    PRINTS OF HOPE<br>
+                    Artwork 04
+                </div>
+
+            </div>
+
+
+            <div class="gallery-item">
+
+                <div class="gallery-placeholder">
+                    PRINTS OF HOPE<br>
+                    Artwork 05
+                </div>
+
+            </div>
+
+
+            <div class="gallery-item">
+
+                <div class="gallery-placeholder">
+                    PRINTS OF HOPE<br>
+                    Artwork 06
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- EXHIBITION INFORMATION -->
+
+    <section>
+
+        <div class="section-label">
+            05 — Exhibition Information
+        </div>
+
+        <h2>
+            2026
+        </h2>
+
+        <div class="info-grid">
+
+            <div class="info-box">
+
+                <div class="info-title">
+                    Exhibition
+                </div>
+
+                <div class="info-value">
+                    Prints of Hope
+                </div>
+
+            </div>
+
+
+            <div class="info-box">
+
+                <div class="info-title">
+                    Type
+                </div>
+
+                <div class="info-value">
+                    International Print Exhibition
+                </div>
+
+            </div>
+
+
+            <div class="info-box">
+
+                <div class="info-title">
+                    Year
+                </div>
+
+                <div class="info-value">
+                    2026
+                </div>
+
+            </div>
+
+
+            <div class="info-box">
+
+                <div class="info-title">
+                    Organised by
+                </div>
+
+                <div class="info-value">
+                    The Printmaking Lab, Sri Lanka
+                </div>
+
+            </div>
+
+
+            <div class="info-box">
+
+                <div class="info-title">
+                    Artists
+                </div>
+
+                <div class="info-value">
+                    International Artists
+                </div>
+
+            </div>
+
+
+            <div class="info-box">
+
+                <div class="info-title">
+                    Medium
+                </div>
+
+                <div class="info-value">
+                    Printmaking & Expanded Print
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ARCHIVE -->
+
+    <section>
+
+        <div class="archive">
+
+            <div class="section-label" style="color:#aaaaaa;">
+                06 — Exhibition Archive
+            </div>
+
+            <h2>
+                Explore the Full Exhibition
+            </h2>
+
+            <p>
+                Visit the complete online archive of Prints of Hope
+                for the original exhibition information, submission
+                details and related material.
+            </p>
+
+            <a
+                class="button"
+                href="https://printmakinglabgallery.wordpress.com/prints-of-hope-international-print-exhibition-2026/"
+                target="_blank"
+                rel="noopener noreferrer">
+
+                View Full Exhibition Archive
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- THE PRINTMAKING LAB -->
+
+    <section class="lab">
+
+        <div class="section-label">
+            07 — The Printmaking Lab
+        </div>
+
+        <div class="lab-grid">
+
+            <div>
+
+                <div class="lab-name">
+                    The Printmaking Lab
+                </div>
+
+                <p>
+                    Sri Lanka
+                </p>
+
+                <p>
+                    An artist-led platform for printmaking,
+                    exhibitions, research, workshops, collaboration
+                    and international artistic exchange.
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <p>
+                    The Printmaking Lab explores traditional,
+                    contemporary and experimental approaches to
+                    printmaking while creating opportunities for
+                    artists to share ideas, processes and experiences.
+                </p>
+
+                <p>
+                    <strong>
+                        Personal Growth · Social Benefit
+                    </strong>
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+</main>
+
+
+
+<!-- ==============================
+     FOOTER
+============================== -->
+
+<footer>
+
+    <div class="footer-inner">
+
+        <div>
+
+            <div class="footer-title">
+                The Printmaking Lab
+            </div>
+
+            <div class="footer-text">
+                Sri Lanka
+            </div>
+
+        </div>
+
+
+        <div class="footer-text">
+
+            Prints of Hope — International Print Exhibition 2026
+
+        </div>
+
+
+        <div>
+
+            <a
+                href="index.html"
+                class="footer-text">
+
+                ← Back to The Printmaking Lab
+
+            </a>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+</body>
+</html>
