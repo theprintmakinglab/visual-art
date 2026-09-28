@@ -1819,3 +1819,76 @@ a {
     height: auto;
     display: block;
 }
+/* =====================================================
+   FEATURED ARTWORK
+===================================================== */
+
+.featured-artwork {
+    width: 100%;
+    background: #ffffff;
+    overflow: hidden;
+}
+
+.featured-artwork img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
+.featured-artwork-info {
+    padding: 25px;
+}
+
+.featured-label {
+    font-size: 12px;
+    letter-spacing: 2px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.featured-artwork-info h2 {
+    margin: 0 0 8px;
+    font-size: 30px;
+    line-height: 1.1;
+}
+
+.featured-artist {
+    margin: 0 0 10px;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.featured-details {
+    margin: 0 0 22px;
+    font-size: 14px;
+    color: #666;
+}
+
+.featured-button {
+    display: inline-block;
+    padding: 12px 20px;
+    background: #111;
+    color: #fff;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: 0.3s ease;
+}
+
+.featured-button:hover {
+    background: #444;
+}
+
+@media (max-width: 768px) {
+
+    .featured-artwork-info {
+        padding: 20px;
+    }
+
+    .featured-artwork-info h2 {
+        font-size: 26px;
+    }
+
+}
